@@ -32,8 +32,8 @@ spring:
     activate:
       on-profile: dev
   datasource:
-    password: Gcp@2024 # cipher
-    url: jdbc:mysql://104.197.94.65:3306/learnerCrownClothing?useSSL=FALSE
+    password: Appdb@123 # cipher
+    url: jdbc:mysql://3.25.140.223:3306/learnercrownclothing?useSSL=FALSE
     username: appdb
   jpa:
     hibernate:
