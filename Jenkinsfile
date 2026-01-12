@@ -122,7 +122,7 @@ pipeline {
                 //echo "it will fail now as running the same port to create container"
                script{
                      imageValidation().call()
-                    dockerDeploy('dev', '5761').call()
+                    dockerDeploy('dev', '5232').call()
                } 
             }
          }
@@ -155,7 +155,7 @@ pipeline {
                 //     }
                     imageValidation().call()
 
-                    dockerDeploy('Test', '6761').call()
+                    dockerDeploy('Test', '6232').call()
                } 
             }
          } 
@@ -177,7 +177,7 @@ pipeline {
               
                script{
                     imageValidation().call()
-                    dockerDeploy('Stage', '7761').call()
+                    dockerDeploy('Stage', '7232').call()
                } 
             }
          } 
@@ -198,7 +198,7 @@ pipeline {
                 input message : "deploying ${env.APPLICATION_NAME} to production ?", ok: 'yes' , submitter: 'sre, swarna'
             }
                script{
-                    dockerDeploy('prod', '8761').call()
+                    dockerDeploy('prod', '8232').call()
                } 
             }
          } 
