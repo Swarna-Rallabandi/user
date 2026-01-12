@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: learner-user-api
+  profiles:
+    active: dev
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    #    password: Learner@2023
+    #    url: jdbc:mysql://34.29.125.76:3306,34.68.236.8:3306/learnerCrownClothing?useSSL=FALSE
+    password: root
+    url: jdbc:mysql://localhost:3306/product_managment?useSSL=FALSE
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+server:
+  port: 8232
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    password: Gcp@2024 # cipher
+    url: jdbc:mysql://104.197.94.65:3306/learnerCrownClothing?useSSL=FALSE
+    username: appdb
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+server:
+  port: 8232
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://34.48.255.154:5761/eureka/
+  instance:
+    preferIpAddress: true
+
+
