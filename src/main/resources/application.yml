@@ -32,9 +32,10 @@ spring:
     activate:
       on-profile: dev
   datasource:
-    password: Appdb@123 # cipher
-    url: jdbc:mysql://3.25.140.223:3306/learnercrownclothing?useSSL=FALSE
     username: appdb
+    password: Appdb@123 # cipher
+    url: jdbc:mysql://project-db.c7i8oswa0w2a.ap-southeast-2.rds.amazonaws.com:3306/learnercrownclothing?useSSL=false&allowPublicKeyRetrieval=true
+    
   jpa:
     hibernate:
       ddl-auto: update
